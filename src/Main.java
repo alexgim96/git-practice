@@ -2,15 +2,13 @@ import java.util.*;
 import java.io.*;
 
 public class Main {
-    public static int solution(int[] absolutes, boolean[] signs){
+    public static int solution(int[] a, int[] b){
         int answer = 0;
-        for(int i = 0; i < absolutes.length; i++){
-            if(signs[i]){
-                answer += absolutes[i];
-            }else{
-                answer -= absolutes[i];
-            }
+
+        for(int i = 0; i < a.length; i++){
+            answer += (a[i] * b[i]);
         }
+
         return answer;
     }
 
